@@ -3,8 +3,9 @@ import { motion } from "framer-motion";
 
 export default function Experience() {
   return (
-    <>
-      <motion.div
+    <section aria-labelledby="experience-title" className="px-4 sm:mt-40 mt-12 flex flex-col items-center">
+      <motion.h2
+        id="experience-title"
         initial={{ opacity: 0, scale: 0 }}
         whileInView={{ opacity: 1, scale: 1 }}
         transition={{
@@ -12,23 +13,35 @@ export default function Experience() {
           scale: { type: "spring", bounce: 0.2 },
         }}
         viewport={{ once: true, amount: 0.5 }}
+        className="text-white font-semibold text-3xl sm:text-5xl mb-8"
       >
-        <div className="flex flex-col items-center sm:mt-40 mt-12 px-4">
-          <div className="text-3xl sm:text-5xl font-semibold text-white">Experience</div>
+        Experience
+      </motion.h2>
 
-          <div className="border-2 border-amber-700 bg-gray-500 rounded-lg p-4 mt-6 w-full max-w-sm md:max-w-md">
-            <span className="text-xl sm:text-3xl font-semibold text-white">
-              Sqilco
-            </span>
-            <p className="text-white text-base sm:text-2xl mt-2">
-              2025 - Present
-            </p>
-            <p className="text-amber-500 text-sm sm:text-xl  mt-1">
-              I have completed a 6-month internship program at Sqilco.
-            </p>
-          </div>
-        </div>
+      <motion.div
+        initial={{ opacity: 0, scale: 0.9 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        transition={{
+          duration: 0.8,
+          scale: { type: "spring", bounce: 0.3 },
+        }}
+        viewport={{ once: true, amount: 0.5 }}
+        className="max-w-sm md:max-w-md w-full border-2 border-amber-700 bg-gray-800 rounded-lg p-6 shadow-lg  transition-shadow duration-300"
+      >
+        <h3 className="text-white text-2xl sm:text-3xl font-semibold mb-2">
+          Sqilco
+        </h3>
+        <p className="text-white text-base sm:text-2xl mb-3">
+          2025 - Present
+        </p>
+        <p className="text-amber-400 text-sm sm:text-xl leading-relaxed">
+          I have completed a 3-month internship program at Sqilco, gaining practical experience in front-end development and teamwork.
+        </p>
       </motion.div>
-    </>
+    </section>
   );
 }
+
+
+
+
